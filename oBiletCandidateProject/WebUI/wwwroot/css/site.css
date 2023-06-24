@@ -1,0 +1,429 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: #2c3e51;
+    background: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    min-width: 263px;
+    width: auto;
+    height: 70px;
+}
+
+.content {
+    width: 430px;
+    margin-right: auto;
+}
+
+.location-title {
+    color: #2e4db2;
+    font-size:14px;
+    font-weight: 700;
+
+}
+
+.main-content{
+    height: auto;
+}
+
+
+
+#formattedDate::before {
+    content: "Seçilen Tarih: ";
+    font-weight: bold;
+}
+
+.datepicker {
+    background-color: #fff;
+    border-radius: 6px;
+    border: solid 1px #eee;
+    box-shadow: 0px 2px 5px 0px rgba(155, 155, 155, 0.5);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 35px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: 310px;
+    font-family: 'Nirmala UI';
+    color: #5D686E;
+}
+
+#datepicker {
+    display: block; /* Görünmez giriþ alaný */
+}
+
+    #datepicker::-webkit-datetime-edit,
+    #datepicker::-webkit-inner-spin-button,
+    #datepicker::-webkit-clear-button {
+        display: block; /* Tarayýcýya özgü bileþenleri gizle */
+    }
+
+.input-icon {
+    position: absolute;
+    margin-left: 10px;
+    z-index: 9999;
+    margin-top: 21px;
+    transform: translateY(-50%);
+}
+
+.change-location {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -16px;
+    margin-right: 50px;
+}
+
+.icon-circle {
+    transform: rotate(90deg);
+    border: solid 1px #55555569;
+    border-radius: 25px 25px 25px 25px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    z-index: 9999;
+}
+
+.icon-circle:hover {
+    transform: rotate(90deg);
+    border: solid 1px #555;
+    border-radius: 25px 25px 25px 25px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    z-index: 9999;
+    cursor:pointer;
+}
+
+.change-button {
+    width: 340px;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+}
+
+.datepicker-button {
+    height: 30px;
+    width: 80px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    border:1px solid rgba(155, 155, 155, 0.5);
+}
+
+    .datepicker-button.selected {
+        color: white;
+        background-color: #777;
+    }
+
+.datepicker-button-group {
+    float: right;
+    position: relative;
+    margin-top: -10px;
+    width: 100px;
+}
+
+.submit-button-group {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.submit-button {
+    height: 50px;
+    width: 300px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    background-color: #2e4db2;
+    border:none;
+}
+
+    .submit-button:hover {
+        background-color: #2e4db2;
+        color:white;
+    }
+
+.lorem-ipsum{
+    margin-top:40px;
+    font-size:14px;
+}
+
+.element{
+    margin-bottom: 20px;
+}
+
+.nav-bar {
+    background-color: #2e4db2;
+    height:70px;
+}
+
+.back-button-group {
+    width:30px;
+    height:30px;
+    z-index:9999;
+    cursor:pointer;
+}
+.back-button-element {
+    margin: auto;
+    width: 70%;
+    margin-top:2px;
+    color:white;
+}
+
+.back-button-group:hover {
+  
+}
+
+.back-button-element a i{
+    color: white;
+}
+
+.journey-body {
+    width: 400px;
+    height: 80px;
+    border: solid 1px #d7d7d7;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #f5f5f5;
+    margin-bottom:10px;
+}
+
+.departure-label {
+    font-size: 9px;
+    margin-left: 9px;
+    color: #2e4db2;
+}
+.departure-body {
+    width: 126px;
+}
+.arrival {
+    margin-left: 60px;
+}
+.departure {
+    margin: 0px;
+}
+.departure-date {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2e4db2;
+    margin-left:5px;
+}
+.price-body {
+    float: right;
+    margin-top: 8px;
+    background-color: #d03a37;
+    width:90px;
+    height: 28px;
+    border-radius: 5px 5px 5px 5px;
+}
+.price {
+    font-size: 13px;
+    margin: auto;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+}
+.location-body{
+    margin-left:5px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+.location{
+
+}
+.arrow {
+    margin-top: 23px;
+    margin-left: 50px;
+    color: #2e4db2;
+}
+.departure-element{
+    position:absolute;
+    width: auto;
+}
+
+.journet-content {
+    margin-bottom: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey-title-body {
+    margin: auto;
+}
+
+.journey-title-location {
+    font-size: 15px;
+    text-align: center;
+    color:white;
+ 
+}
+.journey-title-date {
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+    color: white;
+  
+    font-weight:100;
+}
+
+.select2.select2-container {
+    width: 100% !important;
+}
+
+    .select2.select2-container .select2-selection {
+        border: 1px solid #ccc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        height: 37px;
+        margin-bottom: 15px;
+        outline: none !important;
+        transition: all .15s ease-in-out;
+    }
+
+        .select2.select2-container .select2-selection .select2-selection__rendered {
+            color: #333;
+            line-height: 37px;
+            padding-right: 33px;
+            margin-left: 25px;
+            font-family: 'Nirmala UI';
+            color: #5D686E;
+        }
+
+        .select2.select2-container .select2-selection .select2-selection__arrow {
+            background: #f8f8f8;
+            border-left: 1px solid #ccc;
+            -webkit-border-radius: 0 3px 3px 0;
+            -moz-border-radius: 0 3px 3px 0;
+            border-radius: 0 3px 3px 0;
+            height: 32px;
+            width: 33px;
+        }
+
+    .select2.select2-container.select2-container--open .select2-selection.select2-selection--single {
+        background: #f8f8f8;
+    }
+
+        .select2.select2-container.select2-container--open .select2-selection.select2-selection--single .select2-selection__arrow {
+            -webkit-border-radius: 0 3px 0 0;
+            -moz-border-radius: 0 3px 0 0;
+            border-radius: 0 3px 0 0;
+        }
+
+    .select2.select2-container.select2-container--open .select2-selection.select2-selection--multiple {
+        border: 1px solid #34495e;
+    }
+
+    .select2.select2-container .select2-selection--multiple {
+        height: auto;
+        min-height: 34px;
+    }
+
+        .select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field {
+            margin-top: 0;
+            height: 32px;
+        }
+
+        .select2.select2-container .select2-selection--multiple .select2-selection__rendered {
+            display: block;
+            padding: 0 4px;
+            line-height: 29px;
+        }
+
+        .select2.select2-container .select2-selection--multiple .select2-selection__choice {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            margin: 4px 4px 0 0;
+            padding: 0 6px 0 22px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            position: relative;
+        }
+
+            .select2.select2-container .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 22px;
+                width: 22px;
+                margin: 0;
+                text-align: center;
+                color: #e74c3c;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+.select2-container .select2-dropdown {
+    background: transparent;
+    border: none;
+    margin-top: -5px;
+}
+
+    .select2-container .select2-dropdown .select2-search {
+        padding: 0;
+    }
+
+        .select2-container .select2-dropdown .select2-search input {
+            outline: none !important;
+            border: 1px solid #34495e !important;
+            border-bottom: none !important;
+            padding: 4px 6px !important;
+        }
+
+    .select2-container .select2-dropdown .select2-results {
+        padding: 0;
+    }
+
+        .select2-container .select2-dropdown .select2-results ul {
+            background: #fff;
+            border: 1px solid #34495e;
+        }
+
+            .select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+                background-color: #3498db;
+            }
+
+.select2-container--open .select2-dropdown--below{
+    z-index:9999;
+}
+
+.footer-element {
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}

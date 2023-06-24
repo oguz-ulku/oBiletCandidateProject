@@ -1,0 +1,74 @@
+﻿@using DataModels.Model;
+
+@model BusLocationViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="container">
+    <div class="row content">
+        @using (Html.BeginForm("Journey", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+        <div class="col element">
+            <div class="main">
+                <h1 class="location-title">Nereden</h1>
+                <span class="input-icon">
+                    <i class="fa-solid fa-location-pin"></i>
+                </span>
+                @Html.DropDownListFor(m => m.JourneyModel.OriginId,
+                Model.BusLocationItems, "İl veya İlçe Adı Seçiniz", new {@id="toFrom", @class = "select2-searchable" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col change-button">
+                <div class="change-location" id="change-location">
+                    <div class="icon-circle" onclick="swapDropdownValues()">
+                        <span class="input-icon" style="margin-top: 17px;">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col element">
+            <div class="main">
+                <h1 class="location-title">Nereye</h1>
+                <span class="input-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+                @Html.DropDownListFor(m => m.JourneyModel.DestinationId,
+                Model.BusLocationItems, "İl veya İlçe Adı Seçiniz", new {@id="toWhere", @class = "select2-searchable" })
+            </div>
+        </div>
+        <div class="col element">
+            <h1 class="location-title">Tarih</h1>
+            <span class="input-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+                @Html.TextBoxFor(m => m.JourneyModel.DepartureDate , new {@id="datepicker", @class="datepicker"})
+           
+            <div class="row datepicker-button-group">
+                <div class="row">
+                        <button type="button" class="btn todayBtn datepicker-button" onclick="setToDayDatePicker()">Bugün</button>
+                </div>
+                <div class="row">
+                        <button type="button" class="btn tomorrowBtn datepicker-button" onclick="setTomorrowDatePicker()">Yarın</button>
+                </div>
+            </div>
+        </div>
+        <div class="col element">
+            <div class="submit-button-group">
+                <button type="submit" id="btnsubmit" class="btn submit-button">Bileti Bul</button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="lorem-ipsum">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </div>
+        </div>
+        }
+    </div>
+</div>

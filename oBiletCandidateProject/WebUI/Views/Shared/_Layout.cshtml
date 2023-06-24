@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebUI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery-ui.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebUI.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/fontawesome.css" />
+    <link rel="stylesheet" href="~/css/brands.min.css" />
+    <link rel="stylesheet" href="~/css/regular.min.css" />
+    <link rel="stylesheet" href="~/css/solid.css" />
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/v5-font-face.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar border-bottom box-shadow mb-3 nav-bar">
+            <div class="container-fluid">
+                @{
+                    if(ViewBag.BackButtonUrl != null)
+                    {
+                        <div class="back-button-group">
+                            <div class="back-button-element">
+                                <a href="@ViewBag.BackButtonUrl"><i class="fa-solid fa-arrow-left-long"></i></a>
+                            </div>
+                        </div>
+                    }
+                }
+      
+               <div class="row journey-title-body">
+                        <div class="col2 journey-title-location">@ViewBag.Location</div>
+                        <div class="col2 journey-title-date">@ViewBag.Date</div>
+               </div>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container main-content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer-element text-muted">
+        <div class="container">
+            &copy; 2023 - oBilet - Candidate Project
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Lib/jquery/dist/jquery-ui.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/datepicker-tr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

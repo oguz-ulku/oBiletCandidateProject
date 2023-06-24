@@ -1,0 +1,55 @@
+﻿@using DataModels.Model;
+@model BusJourneyViewModel;
+
+@{
+    ViewData["Title"] = "";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <div class="row journet-content">
+        @{
+            foreach(BusJourneyModel journey in Model.BusLocationItems)
+            {
+                <div class="journey-body">
+                    <div class="row departure-body">
+                        <div class="col departure-element">
+                            <div class="departure">
+                                <label class="departure-label">KALKIŞ</label>
+                                <div class="departure-date">@journey.Journey.Departure.Hour.ToString():@journey.Journey.Departure.Minute.ToString()</div>
+                            </div>
+                        </div>
+                        <div class="col departure-element">
+                            <div class="arrow">
+                                <i class="fa-solid fa-arrow-right-long fa-2xs"></i>
+                            </div>
+                        </div>
+                        <div class="col departure-element">
+                            <div class="arrival">
+                                <label class="departure-label">VARIŞ</label>
+                                <div class="departure-date">@journey.Journey.Arrival.Hour.ToString().PadLeft(2,'0'):@journey.Journey.Arrival.Minute.ToString().PadLeft(2,'0')</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-body">
+                        <div class="price">
+                            @journey.Journey.OriginalPrice.ToString() TL
+                        </div>
+                    </div>
+                    <div class="location-body">
+                        <div class="location">
+                            @journey.Journey.Origin - @journey.Journey.Destination
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        </div>
+</div>
+
+
+
+
+
+
+
